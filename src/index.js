@@ -7,9 +7,10 @@ import './index.css';
 import Game from './components/game';
 
 import store from './store';
-import {resetGame, submitGuess} from './actions';
+import {resetGame, submitGuess, generateAuralUpdate} from './actions';
 
-store.dispatch(submitGuess('77'));
+store.dispatch(submitGuess(77));
+store.dispatch(generateAuralUpdate());
 console.log(store.getState());
 
 store.dispatch(resetGame());
