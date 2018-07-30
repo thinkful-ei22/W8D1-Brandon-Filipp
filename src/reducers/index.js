@@ -6,6 +6,7 @@ const initialState = {
   auralStatus: '',
   correctAnswer: Math.round(Math.random() * 100) + 1
 };
+
 export const gameReducer = (state=initialState, action) => {
 
   if (action.type === actions.RESET_GAME) {
