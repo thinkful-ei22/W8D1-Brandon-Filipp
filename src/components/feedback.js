@@ -5,7 +5,7 @@ import store from '../store'
 
 export function Feedback(props) {
   
-  console.log(store.getState());
+  //console.log(store.getState());
 
   /** 
    * Below, we'll use the guessCount to generate a key so that React treats the feedback message 
