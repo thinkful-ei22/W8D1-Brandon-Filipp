@@ -6,7 +6,6 @@ const initialState = {
   auralStatus: '',
   correctAnswer: Math.round(Math.random() * 100) + 1
 };
-
 export const gameReducer = (state=initialState, action) => {
 
   if (action.type === actions.RESET_GAME) {
@@ -16,6 +15,7 @@ export const gameReducer = (state=initialState, action) => {
       auralStatus: '',
       correctAnswer: Math.round(Math.random() * 100) + 1
     });
+
   } 
 
   if (action.type === actions.SUBMIT_GUESS) {
@@ -58,9 +58,10 @@ export const gameReducer = (state=initialState, action) => {
       auralStatus += ` ${pluralize ? 'In order of most- to least-recent, they are' : 'It was'}: ${guesses.reverse().join(', ')}`;
     }
 
-
     return Object.assign({}, state, {auralStatus});
+
   }
+
   return state;
 
 };
